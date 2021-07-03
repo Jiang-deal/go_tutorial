@@ -16,7 +16,7 @@ func main() {
 	words := strings.Split(s, " ")
 	// 2. 遍历单词做统计
 	for _, word := range words {
-		v, ok := wordCount[word]
+		v, ok := wordCount[word] //如果存在ok就是true
 		if ok {
 			// map中有这个单词的统计记录
 			wordCount[word] = v + 1
@@ -26,6 +26,7 @@ func main() {
 		}
 	}
 	for k, v := range wordCount {
+		//k是key，v是value
 		fmt.Println(k, v)
 	}
 }
